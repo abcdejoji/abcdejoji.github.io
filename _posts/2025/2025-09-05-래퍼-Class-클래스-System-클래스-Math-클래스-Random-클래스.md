@@ -2,7 +2,7 @@
 title: 래퍼, Class, System, Math, Random
 categories: [ "Java & Spring" ]
 tags: [ "인프런 - 실전 자바 중급 1편", 김영한 ]
-date: 2025-10-05 19:00:00
+date: 2025-09-05 19:00:00
 ---
 
 # 래퍼 클래스
