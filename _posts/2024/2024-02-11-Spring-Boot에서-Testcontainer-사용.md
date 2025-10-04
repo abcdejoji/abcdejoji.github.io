@@ -1,7 +1,7 @@
 ---
 title: Spring Boot에서 Testcontainer 사용
-categories: [ Java & Spring ]
-tag: [ test, testcontainer ]
+categories: [ "Java & Spring" ]
+tags: [ test, testcontainer ]
 date: 2024-02-11
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Template Engine을 사용하여 PDF파일로 변환하기
-categories: [ Java & Spring ]
-tag: [ tymeleaf ]
+categories: [ "Java & Spring" ]
+tags: [ tymeleaf ]
 date: 2022-05-12
 ---
 

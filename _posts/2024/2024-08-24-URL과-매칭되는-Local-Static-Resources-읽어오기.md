@@ -1,6 +1,6 @@
 ---
 title: URL과 매칭되는 Local Static Resources 읽어오기
-categories: [ Java & Spring ]
+categories: [ "Java & Spring" ]
 date: 2024-08-24
 ---
 

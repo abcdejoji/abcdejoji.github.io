@@ -1,6 +1,6 @@
 ---
 title: DateTime Format Response 일괄 적용
-categories: [ Java & Spring ]
+categories: [ "Java & Spring" ]
 date: 2024-09-13
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Spring Boot Swagger 3.0 사용법
-categories: [ Java & Spring ]
-tag: [ 문서화, swagger ]
+categories: [ "Java & Spring" ]
+tags: [ 문서화, swagger ]
 date: 2023-11-15
 ---
 
