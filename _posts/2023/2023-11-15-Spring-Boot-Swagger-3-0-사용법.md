@@ -1,8 +1,8 @@
 ---
-title: Spring Boot Swagger 3.0 사용법
+title: "Spring Boot Swagger 3.0 사용법"
 categories: [ "Java & Spring" ]
-tags: [ 문서화, swagger ]
-date: 2023-11-15
+tags: [ "문서화", "swagger" ]
+date: "2023-11-15"
 ---
 
 Spring으로 웹 애플리케이션을 만들 때 문서 자동화 라이브러리로 **Swagger**와 **Spring Rest Docs**가 많이 사용됩니다.

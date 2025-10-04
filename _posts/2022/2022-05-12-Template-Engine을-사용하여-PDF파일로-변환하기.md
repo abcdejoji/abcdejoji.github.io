@@ -1,8 +1,8 @@
 ---
-title: Template Engine을 사용하여 PDF파일로 변환하기
+title: "Template Engine을 사용하여 PDF파일로 변환하기"
 categories: [ "Java & Spring" ]
-tags: [ tymeleaf ]
-date: 2022-05-12
+tags: [ "tymeleaf" ]
+date: "2022-05-12"
 ---
 
 이번에 회사에서 받은 데이터를 가지고 PDF를 만들 일이 있어서`Thymeleaf`를 사용하여 적용해 본 방법을 기록하고자 합니다.
