@@ -1,7 +1,7 @@
 ---
-title: java.lang 패키지
+title: 래퍼, Class, System, Math, Random
 categories: [ Java & Spring ]
-tag: [인프런 - 실전 자바 중급 1편, 김영한]
+tag: [ 인프런 - 실전 자바 중급 1편, 김영한 ]
 date: 2025-10-05 19:00:00
 ---
 
@@ -32,29 +32,29 @@ date: 2025-10-05 19:00:00
 
 ```java
 public static void main(String[] args) {
-    // Primitive -> Wrapper
-    int value = 7;
-    Integer boxedValue = Integer.valueOf(value); // 박싱
+  // Primitive -> Wrapper
+  int value = 7;
+  Integer boxedValue = Integer.valueOf(value); // 박싱
 
-    // Wrapper -> Primitive
-    int unboxedValue = boxedValue.intValue(); // 언박싱
+  // Wrapper -> Primitive
+  int unboxedValue = boxedValue.intValue(); // 언박싱
 
-    System.out.println("boxedValue = " + boxedValue);
-    System.out.println("unboxedValue = " + unboxedValue);
+  System.out.println("boxedValue = " + boxedValue);
+  System.out.println("unboxedValue = " + unboxedValue);
 }
 ```
 
 ```java
 public static void main(String[] args) {
-    // Primitive -> Wrapper
-    int value = 7;
-    Integer boxedValue = value; // 오토 박싱(Auto-boxing)
+  // Primitive -> Wrapper
+  int value = 7;
+  Integer boxedValue = value; // 오토 박싱(Auto-boxing)
 
-    // Wrapper -> Primitive
-    int unboxedValue = boxedValue; // 오토 언박싱(Auto-Unboxing)
+  // Wrapper -> Primitive
+  int unboxedValue = boxedValue; // 오토 언박싱(Auto-Unboxing)
 
-    System.out.println("boxedValue = " + boxedValue);
-    System.out.println("unboxedValue = " + unboxedValue);
+  System.out.println("boxedValue = " + boxedValue);
+  System.out.println("unboxedValue = " + unboxedValue);
 }
 ```
 
@@ -78,33 +78,33 @@ CPU 연산을 아주 많이 수행하는 특수한 경우가 아닌 이상 유�
 
 ```java
 public class ClassMetaMain {
-    public static void main(String[] args) throws Exception {
-        //Class 조회
-        Class clazz = String.class; // 1. 클래스에서 조회
-        //Class clazz = new String().getClass(); // 2. 인스턴스에서 조회
-        //Class clazz = Class.forName("java.lang.String"); // 3. 문자열로 조회
+  public static void main(String[] args) throws Exception {
+    //Class 조회
+    Class clazz = String.class; // 1. 클래스에서 조회
+    //Class clazz = new String().getClass(); // 2. 인스턴스에서 조회
+    //Class clazz = Class.forName("java.lang.String"); // 3. 문자열로 조회
 
-        // 모든 필드 출력
-        Field[] fields = clazz.getDeclaredFields();
-        for (Field field : fields) {
-            System.out.println("field = " + field.getType() + " " + field.getName());
-        }
-
-        // 모든 메서드 출력
-        Method[] methods = clazz.getDeclaredMethods();
-        for (Method method : methods) {
-            System.out.println("method = " + method);
-        }
-
-        // 상위 클래스 정보 출력
-        System.out.println("Superclass: " + clazz.getSuperclass().getName());
-
-        // 인터페이스 정보 출력
-        Class[] interfaces = clazz.getInterfaces();
-        for (Class i : interfaces) {
-            System.out.println("Interface: " + i.getName());
-        }
+    // 모든 필드 출력
+    Field[] fields = clazz.getDeclaredFields();
+    for (Field field : fields) {
+      System.out.println("field = " + field.getType() + " " + field.getName());
     }
+
+    // 모든 메서드 출력
+    Method[] methods = clazz.getDeclaredMethods();
+    for (Method method : methods) {
+      System.out.println("method = " + method);
+    }
+
+    // 상위 클래스 정보 출력
+    System.out.println("Superclass: " + clazz.getSuperclass().getName());
+
+    // 인터페이스 정보 출력
+    Class[] interfaces = clazz.getInterfaces();
+    for (Class i : interfaces) {
+      System.out.println("Interface: " + i.getName());
+    }
+  }
 }
 ```
 
@@ -113,34 +113,34 @@ public class ClassMetaMain {
 ```java
 public class SystemMain {
 
-    public static void main(String[] args) {
-        // 현재 시간(밀리초)를 가져온다.
-        long currentTimeMillis = System.currentTimeMillis();
-        System.out.println("currentTimeMillis = " + currentTimeMillis);
+  public static void main(String[] args) {
+    // 현재 시간(밀리초)를 가져온다.
+    long currentTimeMillis = System.currentTimeMillis();
+    System.out.println("currentTimeMillis = " + currentTimeMillis);
 
-        // 현재 시간(나노초)를 가져온다.
-        long currentTimeNano = System.nanoTime();
-        System.out.println("currentTimeNano = " + currentTimeNano);
+    // 현재 시간(나노초)를 가져온다.
+    long currentTimeNano = System.nanoTime();
+    System.out.println("currentTimeNano = " + currentTimeNano);
 
-        // 환경 변수를 읽는다.
-        System.out.println("getenv= " + System.getenv());
+    // 환경 변수를 읽는다.
+    System.out.println("getenv= " + System.getenv());
 
-        // 시스템 속성을 읽는다.
-        System.out.println("properties = " + System.getProperties());
-        System.out.println("Java version: " + System.getProperty("java.version"));
+    // 시스템 속성을 읽는다.
+    System.out.println("properties = " + System.getProperties());
+    System.out.println("Java version: " + System.getProperty("java.version"));
 
-        // 배열을 고속으로 복사한다.
-        char[] originalArray = {'h', 'e', 'l', 'l', 'o'};
-        char[] copiedArray = new char[5];
-        System.arraycopy(originalArray, 0, copiedArray, 0, originalArray.length);
+    // 배열을 고속으로 복사한다.
+    char[] originalArray = {'h', 'e', 'l', 'l', 'o'};
+    char[] copiedArray = new char[5];
+    System.arraycopy(originalArray, 0, copiedArray, 0, originalArray.length);
 
-        // 배열 출력
-        System.out.println("copiedArray = " + copiedArray);
-        System.out.println("Arrays.toString = " + Arrays.toString(copiedArray));
+    // 배열 출력
+    System.out.println("copiedArray = " + copiedArray);
+    System.out.println("Arrays.toString = " + Arrays.toString(copiedArray));
 
-        // 프로그램 종료
-        System.exit(0);
-    }
+    // 프로그램 종료
+    System.exit(0);
+  }
 }
 ```
 
@@ -149,21 +149,21 @@ public class SystemMain {
 ```java
 public class MathMain {
 
-    public static void main(String[] args) {
-        // 기본 연산 메서드
-        System.out.println("max(10, 20): " + Math.max(10, 20)); // 최대값
-        System.out.println("min(10, 20): " + Math.min(10, 20)); // 최소값
-        System.out.println("abs(-10): " + Math.abs(-10)); // 절대값
+  public static void main(String[] args) {
+    // 기본 연산 메서드
+    System.out.println("max(10, 20): " + Math.max(10, 20)); // 최대값
+    System.out.println("min(10, 20): " + Math.min(10, 20)); // 최소값
+    System.out.println("abs(-10): " + Math.abs(-10)); // 절대값
 
-        // 반올림 및 정밀도 메서드
-        System.out.println("ceil(2.1): " + Math.ceil(2.1)); // 올림
-        System.out.println("floor(2.1): " + Math.floor(2.1)); // 내림
-        System.out.println("round(2.5): " + Math.round(2.5)); // 반올림
+    // 반올림 및 정밀도 메서드
+    System.out.println("ceil(2.1): " + Math.ceil(2.1)); // 올림
+    System.out.println("floor(2.1): " + Math.floor(2.1)); // 내림
+    System.out.println("round(2.5): " + Math.round(2.5)); // 반올림
 
-        // 기타 유용한 메서드
-        System.out.println("sqrt(4): " + Math.sqrt(4)); //제곱근
-        System.out.println("random(): " + Math.random()); //0.0 ~ 1.0 사이의 double 값
-    }
+    // 기타 유용한 메서드
+    System.out.println("sqrt(4): " + Math.sqrt(4)); //제곱근
+    System.out.println("random(): " + Math.random()); //0.0 ~ 1.0 사이의 double 값
+  }
 }
 ```
 
@@ -172,26 +172,26 @@ public class MathMain {
 ```java
 public class RandomMain {
 
-    public static void main(String[] args) {
-        Random random = new Random();
-//        Random random = new Random(1); //seed가 같으면 Random의 결과가 같다.
+  public static void main(String[] args) {
+    Random random = new Random();
+    //        Random random = new Random(1); //seed가 같으면 Random의 결과가 같다.
 
-        int randomInt = random.nextInt();
-        System.out.println("randomInt: " + randomInt);
+    int randomInt = random.nextInt();
+    System.out.println("randomInt: " + randomInt);
 
-        double randomDouble = random.nextDouble();//0.0d ~ 1.0d
-        System.out.println("randomDouble: " + randomDouble);
+    double randomDouble = random.nextDouble();//0.0d ~ 1.0d
+    System.out.println("randomDouble: " + randomDouble);
 
-        boolean randomBoolean = random.nextBoolean();
-        System.out.println("randomBoolean: " + randomBoolean);
+    boolean randomBoolean = random.nextBoolean();
+    System.out.println("randomBoolean: " + randomBoolean);
 
-        // 범위 조회
-        int randomRange1 = random.nextInt(10);//0 ~ 9까지 출력
-        System.out.println("0 ~ 9: " + randomRange1);
+    // 범위 조회
+    int randomRange1 = random.nextInt(10);//0 ~ 9까지 출력
+    System.out.println("0 ~ 9: " + randomRange1);
 
-        int randomRange2 = random.nextInt(10) + 1;// 1 ~ 10까지 출력
-        System.out.println("1 ~ 10: " + randomRange2);
-    }
+    int randomRange2 = random.nextInt(10) + 1;// 1 ~ 10까지 출력
+    System.out.println("1 ~ 10: " + randomRange2);
+  }
 }
 ```
 
