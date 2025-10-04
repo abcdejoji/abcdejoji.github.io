@@ -27,12 +27,7 @@ dependencies {
 }
 ```
 
-<aside>
-💡
-
-Swagger는 OpenAPI의 프레임워크 입니다.
-
-</aside>
+> Swagger는 OpenAPI의 프레임워크 입니다.
 
 # 기본적인 설정
 
@@ -103,7 +98,7 @@ public class SwaggerConfig {
 저는 현재 **Spring Boot 2.7.x**를 사용 중인데 위 처럼 설정하고 서버를 기동시키면 **documentationPluginsBootstrapper** 빈이 **NullPointerException**
 이 발생하여 기동이 되지 않았습니다.
 
-```
+```zsh
 Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
 ```
 
@@ -330,13 +325,8 @@ public class MemberResponse {
 
 - **http://localhost:8080/swagger-ui/index.html**
 
-<aside>
-💡
-
-계속 `http://localhost:8080/swagger-ui` 이렇게 접근해서 404가 발생했습니다.
-`/index.html`까지 붙여주어야 정상적으로 접근이 가능합니다.
-
-</aside>
+> 계속 `http://localhost:8080/swagger-ui` 이렇게 접근해서 404가 발생했습니다.
+> `/index.html`까지 붙여주어야 정상적으로 접근이 가능합니다.
 
 # Spring Security + JWT 추가
 
