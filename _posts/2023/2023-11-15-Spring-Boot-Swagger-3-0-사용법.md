@@ -16,7 +16,7 @@ Spring으로 웹 애플리케이션을 만들 때 문서 자동화 라이브러�
 
 눈치 껏 적당히 **Swagger**를 사용하고 있었지만 이번에 **Swagger**에 대해 본격적으로 정리를 한 번 하려고 합니다.
 
-# 의존성 추가
+## 의존성 추가
 
 우선 Swagger를 사용하기 위해 최근 의존성을 받겠습니다.
 작성 당시의 최신 버전이 3.0입니다.
@@ -29,7 +29,7 @@ dependencies {
 
 > Swagger는 OpenAPI의 프레임워크 입니다.
 
-# 기본적인 설정
+## 기본적인 설정
 
 ```java
 
@@ -93,7 +93,7 @@ public class SwaggerConfig {
 - **.apis(RequestHandlerSelectors.basePackage("com.jojiapp.springswagger"))**: 해당 패키지 하위에 작성된 정보를 읽어 문서를 만듦
 - **.paths(PathSelectors.ant("/\*\*"))**: 패키지 하위에 어떤 경로들만 읽을지 설정. 위는 모두 읽음
 
-# Spring Boot 2.6 이상일 경우 documentationPluginsBootstrapper 빈 NullPointerException 에러 처리
+## Spring Boot 2.6 이상일 경우 documentationPluginsBootstrapper 빈 NullPointerException 에러 처리
 
 저는 현재 **Spring Boot 2.7.x**를 사용 중인데 위 처럼 설정하고 서버를 기동시키면 **documentationPluginsBootstrapper** 빈이 **NullPointerException**
 이 발생하여 기동이 되지 않았습니다.
@@ -113,9 +113,9 @@ spring:
       matching-strategy: ant_path_matcher
 ```
 
-# 어노테이션 살펴보기
+## 어노테이션 살펴보기
 
-## @ApiOperation
+### @ApiOperation
 
 `@ApiOperation`는 해당 API에 대한 제목이나 설명 등을 작성할 수 있습니다.
 
@@ -133,7 +133,7 @@ public MemberResponse get() {
 
 이 외에도 많은 기능이 있지만 주로 이 두 개를 사용할 것 같습니다.
 
-## @Tag
+### @Tag
 
 같은 `@Tag`를 사용중인 API끼리 묶어서 보여줍니다.
 
@@ -168,7 +168,7 @@ public MemberResponse getByName(final String name) {
 
 특정 시나리오가 있는 경우 `@Tag`를 사용하여 함께 사용되는 `API`끼리 묶으면 좋을것 같습니다.
 
-## @ApiImplicitParam
+### @ApiImplicitParam
 
 `@ApiImplicitParam`는 `QueryParams`나 `PathVariable`에 대해 정의 할 때 사용합니다.
 
@@ -194,7 +194,7 @@ public MemberResponse getById(@PathVariable final Long id) {
 
 여러개를 사용하고 싶다면 위 처럼 작성하면 됩니다.
 
-## @ApiParma
+### @ApiParma
 
 `@ApiParam`은 `QueryParam`에 대해서 아래 처럼 작성할 수 있게 지원합니다.
 
@@ -209,7 +209,7 @@ public MemberResponse get(@ApiParam(value = "이름") final String name) {
 
 여러 개의 경우 위 경우와 마찬가지로 `@ApiParams`내에 `@ApiParam`으로 여러개 정의하면 됩니다.
 
-## @ApiModel & @ApiModelProperty
+### @ApiModel & @ApiModelProperty
 
 ```java
 
@@ -227,7 +227,7 @@ public class MemberCreate {
 - `@ApiModel`은 요청 및 응답 `DTO`에 대해서 `Schemas`를 정의
 - `@ApiModelProperty`는 각 필드 별 명세를 정의합니다.
 
-## @ApiResponse
+### @ApiResponse
 
 `@ApiResponse`는 응답에 대한 명세를 작성합니다.
 
@@ -245,7 +245,7 @@ public MemberResponse getById(final Long id) {
 }
 ```
 
-## 전체적인 예시
+### 전체적인 예시
 
 ```java
 
@@ -321,14 +321,14 @@ public class MemberResponse {
 }
 ```
 
-# Swagger 접속 링크
+## Swagger 접속 링크
 
 - **http://localhost:8080/swagger-ui/index.html**
 
 > 계속 `http://localhost:8080/swagger-ui` 이렇게 접근해서 404가 발생했습니다.
 > `/index.html`까지 붙여주어야 정상적으로 접근이 가능합니다.
 
-# Spring Security + JWT 추가
+## Spring Security + JWT 추가
 
 `Spring Security` + `JWT`를 사용중이라면 `Authorization` 헤더에 `Bearer <Token>`값을 넣어서 요청을 보내야 합니다.
 
@@ -417,7 +417,7 @@ public class SwaggerConfig {
 
 ```
 
-# 참고
+## 참고
 
 - [Swagger 공식문서](https://swagger.io/docs/specification/about/)
 - [[Swagger UI] Annotation 설명](https://velog.io/@gillog/Swagger-UI-Annotation-%EC%84%A4%EB%AA%85)

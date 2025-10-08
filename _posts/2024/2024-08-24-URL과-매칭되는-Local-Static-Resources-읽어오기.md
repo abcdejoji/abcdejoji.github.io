@@ -30,6 +30,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 - `/images` 하위로 오는 모든 경로는 `file://BASE_FILE_PATH/` 로 매핑
 - `localhost:8080/images/a.pdf` → `file://BASE_FILE_PATH/a.pdf`
 
-# 참고
+## 참고
 
 - [로컬 환경에서 정적 리소스 리로드 하기](https://bottom-to-top.tistory.com/39)

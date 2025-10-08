@@ -22,7 +22,7 @@ date: "2024-02-11"
 
 이제 Testcontainer를 적용하기 위해 테스트 하면서 겪었던 부분들을 작성해 보겠습니다.
 
-# 의존성 받기
+## 의존성 받기
 
 ```groovy
 ext {
@@ -49,7 +49,7 @@ testImplementation 'org.testcontainers:mysql'
 
 ```
 
-# MySQL Container 사용
+## MySQL Container 사용
 
 ```java
 
@@ -95,7 +95,7 @@ public interface MemberRepo extends JpaRepository<Member, Long> {
 
 우선 테스트 하기 앞서 간단하게 DB에 값을 넣을 수 있도록 간단하게 작성하였습니다.
 
-## MySQL Container - 첫 번째 방법
+### MySQL Container - 첫 번째 방법
 
 ```java
 
@@ -156,7 +156,7 @@ class MemberServiceTest {
 - `@Testcontainers`: start(), stop()를 실행 (라이프 사이클 관리)
 - `@Container`: 해당 객체가 테스트 컨테이너 임을 선언
 
-## MySQL Container - 두 번째 방법
+### MySQL Container - 두 번째 방법
 
 Spring Boot는 properties 혹은 yml 파일을 읽어서 자동으로 설정하여 객체를 생성해 줍니다.
 
@@ -188,7 +188,7 @@ spring:
 
 첫 번째 방법과 두 번째 방법이 공존하면 두 번째 방법이 설정을 오버라이드 하는 것으로 아는데 저는 컨테이너가 2개가 떴습니다. 물론 사용하는 컨테이너는 두 번째 방법이 사용되었으나 찝찝했습니다.
 
-# DockerComposeContainer 사용
+## DockerComposeContainer 사용
 
 저는 어차피 배포를 하면 `docker-compose`를 사용할 것이라 이 또한 동일하게 가져가는 것이 따로 설정을 다시 다 해주는것 보다 편리할 것 같다는 생각이 들었습니다
 
@@ -295,7 +295,7 @@ class MemberServiceTest {
 
 ```
 
-## STEP. 1
+### STEP. 1
 
 ```java
 
@@ -314,7 +314,7 @@ static final DockerComposeContainer dockerComposeContainer =
 
 `Wait.forListeningPort().withStartupTimeout(Duration.ofSeconds(30))`: 컨테이너가 뜨기도 전에 테스트가 실행되지 않게 하기 위해 대기시간을 걸어줍니다.
 
-## STEP. 2
+### STEP. 2
 
 ```java
 
@@ -349,7 +349,7 @@ testImplementation 'org.testcontainers:mysql' // 제거
 
 ```
 
-# 마치며
+## 마치며
 
 이 외 `GenericContainer`를 이용하여 컨테이너를 생성하는 방법도 존재하지만 저는 `docker-compose` 방식을 자주 사용할 것 같아 따로 공부 해보지는 않았습니다.
 
@@ -359,7 +359,7 @@ testImplementation 'org.testcontainers:mysql' // 제거
 
 여기서는 MySQL을 기준으로 작성 했지만 위 내용을 이해 했다면 다른 DB로 바꾸는 것도 문제가 없을 것이라 생각합니다.
 
-# 참고
+## 참고
 
 - [https://www.testcontainers.org/](https://www.testcontainers.org/)
 - [[인프런] 더 자바, 애플리케이션을 테스트하는 다양한 방법 — 백기선](https://www.inflearn.com/course/the-java-application-test)

@@ -5,14 +5,14 @@ tags: [ "[인프런] 김영한의 실전 자바 - 중급 1편" ]
 date: "2025-09-15 19:00:00"
 ---
 
-# 래퍼 클래스
+## 래퍼 클래스
 
-## 기본형의 한계
+### 기본형의 한계
 
 - **객체가 아님**: 객체는 유용한 메서드를 제공할 수 있는데, 기본형은 객체가 아니므로 메서드를 제공할 수 없습니다. 또한, 객체 참조가 필요한 컬렉션 프레임워크, 제네릭도 사용할 수 없습니다.
 - **null 일수 없다**: 때로는 `없음` 이라는 상태가 필요할 수 있는데, 기본형 타입은 `null` 을 가질 수 없습니다.
 
-## 자바 래퍼 클래스
+### 자바 래퍼 클래스
 
 - `byte` → `Byte`
 - `short` → `Short`
@@ -23,12 +23,12 @@ date: "2025-09-15 19:00:00"
 - `char` → `Character`
 - `boolean` → `Boolean`
 
-### 특징
+#### 특징
 
 - 불변 객체
 - `equals()`로 비교
 
-### 박싱, 언박싱, 오토 박싱
+#### 박싱, 언박싱, 오토 박싱
 
 ```java
 public static void main(String[] args) {
@@ -58,18 +58,18 @@ public static void main(String[] args) {
 }
 ```
 
-### parseInt() vs valueOf()
+#### parseInt() vs valueOf()
 
 - `parseInt()` : 기본형을 반환
 - `valueOf()` : 래퍼 타입을 반환
 
-### 기본형, 래퍼 클래스 어떤것을 사용?
+#### 기본형, 래퍼 클래스 어떤것을 사용?
 
 CPU 연산을 아주 많이 수행하는 특수한 경우가 아닌 이상 유지보수하기 더 쉬운 것을 선택하면 됩니다.
 
-# Class 클래스
+## Class 클래스
 
-## 주요 기능
+### 주요 기능
 
 - **타입 정보 얻기**: 클래스의 이름, 슈퍼클래스, 인터페이스, 접근 제한자 등과 같은 정보를 조회할 수 있습니다.
 - **리플렉션**: 클래스에 정의된 메서드, 필드, 생성자 등을 조회하고, 이들을 통해 객체 인스턴스를 생성하거나 메서드를 호출하는 등의 작업을 할 수 있습니다.
@@ -108,7 +108,7 @@ public class ClassMetaMain {
 }
 ```
 
-# System 클래스
+## System 클래스
 
 ```java
 public class SystemMain {
@@ -144,7 +144,7 @@ public class SystemMain {
 }
 ```
 
-# Math 클래스
+## Math 클래스
 
 ```java
 public class MathMain {
@@ -167,7 +167,7 @@ public class MathMain {
 }
 ```
 
-# Random
+## Random
 
 ```java
 public class RandomMain {
@@ -195,6 +195,6 @@ public class RandomMain {
 }
 ```
 
-# 참고
+## 참고
 
 - [https://www.inflearn.com/course/김영한의-실전-자바-중급-1](https://www.inflearn.com/course/%EA%B9%80%EC%98%81%ED%95%9C%EC%9D%98-%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94-%EC%A4%91%EA%B8%89-1)

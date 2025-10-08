@@ -37,6 +37,6 @@ public class ContactAppConfig {
 
 위의 코드는 `JSON`으로 `serializers`할 때, `LocalDateTime`과 `LocalDate`를 지정한 `format`으로 변환되도록 설정 한 것입니다.
 
-# 참고
+## 참고
 
 - [Formatting JSON Dates in Spring Boot](https://www.baeldung.com/spring-boot-formatting-json-dates)

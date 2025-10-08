@@ -7,7 +7,7 @@ date: "2022-05-12"
 
 이번에 회사에서 받은 데이터를 가지고 PDF를 만들 일이 있어서`Thymeleaf`를 사용하여 적용해 본 방법을 기록하고자 합니다.
 
-# 의존성
+## 의존성
 
 - **build.gradle**
 
@@ -23,7 +23,7 @@ dependencies {
 
 ```
 
-# Template Engine을 사용하여 렌더링 된 HTML을 String으로 반환받기
+## Template Engine을 사용하여 렌더링 된 HTML을 String으로 반환받기
 
 ```java
 
@@ -53,7 +53,7 @@ public class TemplateParser {
 
 ```
 
-# Spring Boot에서 Template Engine 사용 시
+## Spring Boot에서 Template Engine 사용 시
 
 `interface TemplateParser`를 만들어`Template Engine`마다 상속받아 구현하는 것이 더 좋은 설계이지만,`Spring Boot`를 이용하면 설정파일로`Template Engine`설정할
 수 있습니다.`Spring Boot`는 기본적으로`Thymeleaf`가 설치 되어 있다면`Thymeleaf`설정을 해줍니다.
@@ -77,7 +77,7 @@ public class TemplateParser {
 
 ```
 
-# Thymeleaf 사용하기
+## Thymeleaf 사용하기
 
 `layout`기능을 사용하기 위해선`org.springframework.boot:spring-boot-starter-thymeleaf`외에
 `nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect`도 필요합니다.
@@ -115,7 +115,7 @@ public class TemplateParser {
 
 저는 공통적으로 사용 될`layout`용`html`을 하나 만들어서 사용했습니다.
 
-# th:replace 부분에 들어갈 파일 작성
+## th:replace 부분에 들어갈 파일 작성
 
 `partials/header`부분은`templates`폴더 하위 부터 해당 파일의`절대경로`를 나타내며`::`이후`commonHeader`는 해당 파일 내에서`th:fragment`로 선언된 이름입니다.
 
@@ -129,7 +129,7 @@ public class TemplateParser {
 
 ```
 
-# layout:fragment 부분에 들어갈 파일 작성
+## layout:fragment 부분에 들어갈 파일 작성
 
 ```html
 <!DOCTYPE html>
@@ -155,7 +155,7 @@ public class TemplateParser {
 > `layout:decorate="~{pdf/approval/document/layout/document}"`부분을 보면`~{}`로 감싸져 있는데,`~{}`로 감싸지 않으면`WARN`이 발생합니다.
 > `th:block`에`th:replace`나`layout:fragment`등을 사용해도`WARN`이 납니다. 그렇기 때문에 일반적인 태그를 사용하기 바랍니다.
 
-# HTML String으로 PDF파일 생성 후 저장하기
+## HTML String으로 PDF파일 생성 후 저장하기
 
 ```java
 
@@ -188,7 +188,7 @@ public class PdfGenerator {
 
 ```
 
-# 한글 처리
+## 한글 처리
 
 위 처럼 적용했더니, 한글만 적으면 화면에 보이질 않았습니다. 한글을 보여주기 위해선`한글을 지원하는 폰트`를 별도로 설정을 해줬어야 했습니다.
 
@@ -275,6 +275,6 @@ public class PdfGenerator {
 
 이제 한글도 정상적으로 나오는 것을 확인할 수 있습니다.
 
-# 참고
+## 참고
 
 - [[Spring] html 파일(with Thymeleaf)을 pdf파일로 변환하기](https://zorba91.tistory.com/323)
