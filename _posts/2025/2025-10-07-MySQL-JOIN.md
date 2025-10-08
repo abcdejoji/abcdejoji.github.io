@@ -1,5 +1,5 @@
 ---
-title: "MySQL Join"
+title: "MySQL JOIN"
 categories: [ "DB" ]
 tags: [ "[인프런] 김영한의 실전 데이터베이스 - 기본편", "RDBMS", "MySQL" ]
 date: "2025-10-07 02:35:00"
