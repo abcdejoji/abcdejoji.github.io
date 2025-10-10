@@ -22,7 +22,7 @@ description: "백엔드 개발자의 기술 블로그"
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://abcdejoji.github.io"
 
 github:
   username: "abcdejoji" # change to your GitHub username
