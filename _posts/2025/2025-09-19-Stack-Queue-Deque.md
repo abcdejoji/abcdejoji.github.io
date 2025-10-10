@@ -1,6 +1,6 @@
 ---
 title: "Stack, Queue, Deque"
-categories: [ "자료구조 & 알고리즘" ]
+categories: [ "Java & Spring" ]
 tags: [ "[인프런] 김영한의 실전 자바 - 중급 2편", "자료구조" ]
 date: "2025-09-19 01:21:00"
 ---
