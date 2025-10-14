@@ -293,7 +293,7 @@ public class MyArrayListV4<E> {
   private Object[] elementData;
   private int size = 0;
 
-  // new E[]은 불가능 하기 떄문에 여전히 Object 타입을 사용
+  // new E[]은 불가능 하기 때문에 여전히 Object 타입을 사용
   // 조회 시, 제네릭 타입으로 다운 캐스팅하여 반환
   public MyArrayListV4() {
     elementData = new Object[DEFAULT_CAPACITY];
