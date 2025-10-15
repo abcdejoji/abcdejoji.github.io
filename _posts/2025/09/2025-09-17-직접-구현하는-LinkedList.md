@@ -44,7 +44,7 @@ public class Node {
 }
 ```
 
-![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504375244426000.png)
+![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504375244426000.png)
 
 ```java
 public class NodeMain1 {
@@ -226,18 +226,18 @@ public class MyLinkedListV1 {
 #### 데이터 추가
 
 - 첫 번째 위치에 데이터 추가
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504530768373875.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504539556478125.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504550662351166.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504555543289000.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504530768373875.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504539556478125.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504550662351166.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504555543289000.png)
   - 배열의 경우 첫 번쨰 항목에 데이터가 추가되면 모든 데이터를 오른쪽으로 하나씩 밀어야 하지만 연결 리스트는 새로 생성한 노드의 참조만 변경하면 끝
   - 즉, O(1)의 성능
 
 - 중간 위치에 데이터 추가
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504593585966250.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504602788054416.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504609371538291.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504616998882416.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504593585966250.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504602788054416.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504609371538291.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504616998882416.png)
   - 배열의 경우 데이터가 추가되면 인덱스 위치부터 모든 데이터를 오른쪽으로 하나씩 밀어야 하지만 연결 리스트는 새로 생성한 노드의 참조만 변경하면 끝
   - O(n)의 성능
     - 변경은 O(1)
@@ -261,18 +261,18 @@ public void add(int index, Object e) {
 #### 데이터 삭제
 
 - 첫 번째 위치의 데이터 삭제
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504697389439500.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504703053497708.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504709536373125.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504719315663708.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504697389439500.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504703053497708.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504709536373125.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504719315663708.png)
   - 배열의 경우 첫 번쨰 항목에 데이터가 추가되면 모든 데이터를 왼쪽으로 하나씩 밀어야 하지만 연결 리스트는 새로 생성한 노드의 참조만 변경하면 끝
   - 즉, O(1)의 성능
 
 - 중간 위치의 데이터 삭제
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504751565845375.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504756788728416.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504764604027083.png)
-  ![](/assets/img/posts/2025/2025-09-17-직접-구현하는-LinkedList/504769428602875.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504751565845375.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504756788728416.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504764604027083.png)
+  ![](/assets/img/posts/2025/09/2025-09-17-직접-구현하는-LinkedList/504769428602875.png)
   - 배열의 경우 데이터가 추가되면 인덱스 위치부터 모든 데이터를 왼쪽으로 하나씩 밀어야 하지만 연결 리스트는 새로 생성한 노드의 참조만 변경하면 끝
   - O(n)의 성능
     - 삭제는 O(1)

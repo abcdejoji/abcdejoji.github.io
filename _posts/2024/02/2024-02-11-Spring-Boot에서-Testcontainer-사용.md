@@ -200,7 +200,7 @@ version: '3'
 services:
   app:
     build:
-      context: ./
+      context: ..
       dockerfile: Dockerfile-server
   # restart: always
   ports:
