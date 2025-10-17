@@ -2,7 +2,7 @@
 title: "고급 동기화 - concurrent.Lock"
 categories: [ "Java & Spring" ]
 tags: [ "[인프런] 김영한의 실전 자바 - 고급 1편" ]
-date: "2025-09-21 03:21:00"
+date: "2025-09-22 00:50:00"
 ---
 
 ## synchronized 단점
