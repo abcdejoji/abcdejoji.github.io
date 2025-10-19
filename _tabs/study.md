@@ -22,3 +22,7 @@ order: 3
 ## Git & GitHub
 
 - [[인프런] 제대로 파는 Git & GitHub - by 얄코](https://abcdejoji.github.io/tags/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-git-github-by-%EC%96%84%EC%BD%94/)
+
+## Backend
+
+- [[인프런] 제미니의 개발실무 - 커머스 백엔드 기본편](https://abcdejoji.github.io/tags/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%A0%9C%EB%AF%B8%EB%8B%88-%EA%B0%9C%EB%B0%9C%EC%8B%A4%EB%AC%B4-%EC%BB%A4%EB%A8%B8%EC%8A%A4-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B8%B0%EB%B3%B8%ED%8E%B8/)
