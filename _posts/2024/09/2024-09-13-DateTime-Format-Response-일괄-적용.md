@@ -1,7 +1,7 @@
 ---
 title: "DateTime Format Response 일괄 적용"
 categories: [ "Java & Spring" ]
-date: "2024-09-13"
+date: "2024-09-13 00:00:00"
 ---
 
 `JSON`으로 `Response`로 `LocalDateTime` 혹은 `LocalDate`처럼 시간 관련 값을 내려줄 때, 각각 `format` 형식을 적용하여 주는 방법이 있습니다.

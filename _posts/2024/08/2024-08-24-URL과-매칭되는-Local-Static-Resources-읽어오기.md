@@ -1,7 +1,7 @@
 ---
 title: "URL과 매칭되는 Local Static Resources 읽어오기"
 categories: [ "Java & Spring" ]
-date: "2024-08-24"
+date: "2024-08-24 00:00:00"
 ---
 
 AWS S3 같은 서비스를 이용하고 있다면, 업로드 된 파일의 URL을 통해 파일을 읽어올 수 있습니다.
