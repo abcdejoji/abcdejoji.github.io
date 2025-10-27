@@ -38,7 +38,7 @@ git submodule update --remote
 ## 클론 받기
 
 - 메인 모듈을 클론 받으면 `submodule`은 껍데기만 있음
-- 이떄, 아래 명령어를 통해 받아와야 함
+- 이때, 아래 명령어를 통해 받아와야 함
 
 ```bash
 git submodule init (서브모듈명, 생략 시 전체)
