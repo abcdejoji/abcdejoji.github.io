@@ -112,7 +112,7 @@ public class BankMain1 {
 
 이 현상은 공유자원에 동시에 접근하면서 발생합니다.
 
-![](/assets/img/posts/2025/09/2025-09-21-동기화-synchronized/20735317407250.png)
+![](/assets/img/_posts/2025/09/2025-09-21-동기화-synchronized/20735317407250.png)
 
 #### 출금 처리 과정
 

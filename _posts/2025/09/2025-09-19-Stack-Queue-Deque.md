@@ -9,8 +9,8 @@ date: "2025-09-19 01:21:00"
 
 - LIFO(Last In First Out): 후입 선출
 
-![](/assets/img/posts/2025/09/2025-09-19-Stack-Queue-Deque/626614480060708.png)
-![](/assets/img/posts/2025/09/2025-09-19-Stack-Queue-Deque/626621678029583.png)
+![](/assets/img/_posts/2025/09/2025-09-19-Stack-Queue-Deque/626614480060708.png)
+![](/assets/img/_posts/2025/09/2025-09-19-Stack-Queue-Deque/626621678029583.png)
 
 > 성능이 좋지 않아 사용하지 않습니다. 대신 `Deque`를 사용하면 됩니다.
 
@@ -18,13 +18,13 @@ date: "2025-09-19 01:21:00"
 
 - FIFO(First In First Out): 선입 선출
 
-![](/assets/img/posts/2025/09/2025-09-19-Stack-Queue-Deque/626636131918250.png)
+![](/assets/img/_posts/2025/09/2025-09-19-Stack-Queue-Deque/626636131918250.png)
 
 ## Deque
 
 - Stack, Queue의 기능을 모두 사용할 수 있는 자료구조
 
-![](/assets/img/posts/2025/09/2025-09-19-Stack-Queue-Deque/626648041785291.png)
+![](/assets/img/_posts/2025/09/2025-09-19-Stack-Queue-Deque/626648041785291.png)
 
 - `offerFirst()`, `push()`: 앞에 추가
 - `offerLast()`, `offer()`: 뒤에 추가
@@ -33,7 +33,7 @@ date: "2025-09-19 01:21:00"
 
 ### 상속 구조
 
-![](/assets/img/posts/2025/09/2025-09-19-Stack-Queue-Deque/626655891917708.png)
+![](/assets/img/_posts/2025/09/2025-09-19-Stack-Queue-Deque/626655891917708.png)
 
 ### ArrayDeque vs LinkedList
 

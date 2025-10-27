@@ -7,7 +7,7 @@ date: "2025-10-07 02:35:00"
 
 ## Inner Join
 
-![](/assets/img/posts/2025/10/2025-10-07-MySQL-Join/534746625540625.png)
+![](/assets/img/_posts/2025/10/2025-10-07-MySQL-Join/534746625540625.png)
 
 ```sql
 select *
@@ -21,7 +21,7 @@ from 테이블A a
 
 ### Left Join
 
-![](/assets/img/posts/2025/10/2025-10-07-MySQL-Join/534316385832958.png)
+![](/assets/img/_posts/2025/10/2025-10-07-MySQL-Join/534316385832958.png)
 
 ```sql
 select *
@@ -31,7 +31,7 @@ from 테이블A a
 
 ### Right Join
 
-![](/assets/img/posts/2025/10/2025-10-07-MySQL-Join/534338583325250.png)
+![](/assets/img/_posts/2025/10/2025-10-07-MySQL-Join/534338583325250.png)
 
 ```sql
 select *

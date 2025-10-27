@@ -35,7 +35,7 @@ public interface Iterator<E> {
 
 ## 상속 구조
 
-![](/assets/img/posts/2025/09/2025-09-19-Iterable-Iterator/626851964660291.png)
+![](/assets/img/_posts/2025/09/2025-09-19-Iterable-Iterator/626851964660291.png)
 
 - `Collection` 인터페이스를 상속받은 자료구조는 모두 `Iterable`과 `Iterable`을 통해 순회 가능
 - `Map`은 `Collection`을 상속하지 않기 때문에 순회할 수 없으나, `keySet()`, `values()`, `entrySet()`을 통해 추출하여 순회 가능
